@@ -6,13 +6,13 @@ FROM gitpod/workspace-rust:2023-10-19-14-24-02
 # RUN rm -rf .rustup
 # RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-RUN rustup update stable
-RUN rustup target add --toolchain stable wasm32-unknown-unknown
-RUN rustup component add --toolchain stable rust-src
-RUN rustup update nightly
-RUN rustup target add --toolchain nightly wasm32-unknown-unknown
-RUN rustup component add --toolchain nightly rust-src
-RUN rustup default nightly
+# RUN rustup update stable
+# RUN rustup target add --toolchain stable wasm32-unknown-unknown
+# RUN rustup component add --toolchain stable rust-src
+# RUN rustup update nightly
+# RUN rustup target add --toolchain nightly wasm32-unknown-unknown
+# RUN rustup component add --toolchain nightly rust-src
+# RUN rustup default nightly
 
 # RUN sudo apt-get update && sudo apt-get install -y binaryen
 # RUN rustup target add wasm32-unknown-unknown
