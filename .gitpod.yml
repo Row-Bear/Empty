@@ -2,4 +2,3 @@ image:
   file: .Dockerfile
 tasks:
 - init: clear
-- command: echo Welcome!
