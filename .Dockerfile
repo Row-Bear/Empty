@@ -1,12 +1,19 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-rust:2023-10-19-14-24-02
 
-USER gitpod
+# Remove the existing rustup installation before updating due to:
+# https://github.com/gitpod-io/workspace-images/issues/933#issuecomment-1272616892
+RUN rustup self uninstall -y
+RUN rm -rf .rustup
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-# Install custom tools, runtime, etc. using apt-get
-# For example, the command below would install "bastet" - a command line tetris clone:
-#
-# RUN sudo apt-get -q update && \
-#     sudo apt-get install -yq bastet && \
-#     sudo rm -rf /var/lib/apt/lists/*
-#
-# More information: https://www.gitpod.io/docs/config-docker/
+RUN rustup update stable
+RUN rustup target add --toolchain stable wasm32-unknown-unknown
+RUN rustup component add --toolchain stable rust-src
+RUN rustup update nightly
+RUN rustup target add --toolchain nightly wasm32-unknown-unknown
+RUN rustup component add --toolchain nightly rust-src
+RUN rustup default nightly
+
+RUN sudo apt-get update && sudo apt-get install -y binaryen
+RUN rustup target add wasm32-unknown-unknown
+RUN cargo install --locked --version 20.0.0-rc4 soroban-cli
