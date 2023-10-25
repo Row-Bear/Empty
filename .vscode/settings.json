@@ -1,4 +1,7 @@
 {
     "workbench.startupEditor": "none",
-    "terminal.integrated.defaultLocation": "editor"
+    "terminal.integrated.defaultLocation": "editor",
+    "workbench.panel.opensMaximized": "always",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.hideOnStartup": "always"
 }
