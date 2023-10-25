@@ -1,7 +1,4 @@
 image:
-    file: Dockerfile
-
+  file: .Dockerfile
 tasks:
-    - name: Your Terminal Name Here
-      init: exit
-      command: echo Welcome
+- command: exit

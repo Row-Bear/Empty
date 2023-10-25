@@ -17,6 +17,3 @@ FROM gitpod/workspace-rust:2023-10-19-14-24-02
 # RUN sudo apt-get update && sudo apt-get install -y binaryen
 # RUN rustup target add wasm32-unknown-unknown
 # RUN cargo install --locked --version 20.0.0-rc4 soroban-cli
-
-RUN exit
-RUN echo Welcome!
