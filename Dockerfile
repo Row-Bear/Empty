@@ -14,7 +14,7 @@ RUN rustup target add --toolchain nightly wasm32-unknown-unknown
 RUN rustup component add --toolchain nightly rust-src
 RUN rustup default nightly
 
-RUN sudo apt-get update && sudo apt-get install -y binaryen
-RUN rustup target add wasm32-unknown-unknown
-RUN cargo install --locked --version 20.0.0-rc4 soroban-cli
+# RUN sudo apt-get update && sudo apt-get install -y binaryen
+# RUN rustup target add wasm32-unknown-unknown
+# RUN cargo install --locked --version 20.0.0-rc4 soroban-cli
 

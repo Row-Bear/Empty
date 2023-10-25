@@ -1,2 +1,9 @@
 image:
     file: Dockerfile
+
+tasks:
+    - name: Your Terminal Name Here
+      command: exit
+
+    - name: Your Terminal Name Here
+      command: echo Welcome
