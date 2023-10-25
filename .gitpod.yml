@@ -3,7 +3,5 @@ image:
 
 tasks:
     - name: Your Terminal Name Here
-      command: exit
-
-    - name: Your Terminal Name Here
+      init: exit
       command: echo Welcome

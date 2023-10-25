@@ -1,3 +1,4 @@
 {
+    "workbench.startupEditor": "none",
     "terminal.integrated.defaultLocation": "editor"
 }
