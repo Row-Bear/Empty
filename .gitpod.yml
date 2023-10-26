@@ -7,6 +7,6 @@ tasks:
       exit
       soroban config identity generate default --global
       soroban config identity fund default --network futurenet
-      soroban config network add rpciege --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022" 
+      soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022" 
       soroban version
       clear
