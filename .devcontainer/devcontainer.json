@@ -8,6 +8,13 @@
 			// Path is relative to the devcontainer.json file.
 			"dockerfile": ".Dockerfile"
 		},
+		"customizations": {
+			"vscode": {
+				"extensions": [
+					"EthanSK.restore-terminals"
+				]
+			}
+		},
 
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
@@ -27,8 +34,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-		//"postCreateCommand": "exit"
-
+		//"postCreateCommand": "mkdir -p $HOME/.config/vscode-dev-containers/ && touch $HOME/.config/vscode-dev-containers/first-run-notice-already-displayed"
+		"postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
 	// Configure tool-specific properties.
 	// "customizations": {},
 

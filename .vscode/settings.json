@@ -9,7 +9,7 @@
         "splitTerminals": [
             {
             "name": "RPCiege",
-            "commands": ["echo Welcome!"]
+            //"commands": ["ls"]
             }
         ]
         }
