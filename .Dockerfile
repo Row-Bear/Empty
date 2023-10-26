@@ -1,5 +1,3 @@
-FROM gitpod/workspace-rust:2023-10-19-14-24-02
-
 # Remove the existing rustup installation before updating due to:
 # https://github.com/gitpod-io/workspace-images/issues/933#issuecomment-1272616892
 RUN rustup self uninstall -y
@@ -14,5 +12,3 @@ RUN rustup default stable
 RUN sudo apt-get update && sudo apt-get install -y binaryen
 RUN rustup target add wasm32-unknown-unknown
 RUN cargo install --locked --version 20.0.0-rc4 soroban-cli
-
-RUN exit
