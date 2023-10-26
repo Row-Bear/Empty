@@ -2,7 +2,7 @@ image:
   file: .Dockerfile
 tasks:
   - name: Terminal
-    init: clear #in place to allow for pre-building
+    init: clear # In place to allow for pre-building
     command: |
       exit
       soroban version
