@@ -27,7 +27,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-		//"postStartCommand": "postStartCommands.sh && kill"
+		//"postCreateCommand": "exit"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
