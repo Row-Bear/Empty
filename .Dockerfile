@@ -9,10 +9,7 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN rustup update stable
 RUN rustup target add --toolchain stable wasm32-unknown-unknown
 RUN rustup component add --toolchain stable rust-src
-RUN rustup update nightly
-RUN rustup target add --toolchain nightly wasm32-unknown-unknown
-RUN rustup component add --toolchain nightly rust-src
-RUN rustup default nightly
+RUN rustup default stable
 
 RUN sudo apt-get update && sudo apt-get install -y binaryen
 RUN rustup target add wasm32-unknown-unknown
