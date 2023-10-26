@@ -1,5 +1,6 @@
 image:
   file: .Dockerfile
 tasks:
-- init: clear
-- command: clear
+  - name: Terminal
+    init: clear
+    command: clear
