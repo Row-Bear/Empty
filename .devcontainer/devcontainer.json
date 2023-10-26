@@ -34,6 +34,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
+		// as per https://github.com/orgs/community/discussions/43534:
+		// Option to disable welcome message, or replace it with welcome.txt
 		//"postCreateCommand": "mkdir -p $HOME/.config/vscode-dev-containers/ && touch $HOME/.config/vscode-dev-containers/first-run-notice-already-displayed"
 		"postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
 	// Configure tool-specific properties.
