@@ -1,17 +1,5 @@
 {
     "workbench.startupEditor": "none",
     "terminal.integrated.cursorBlinking": true,
-    "workbench.panel.opensMaximized": "always",
-    "terminal.integrated.defaultLocation": "editor",
-    "terminal.integrated.hideOnStartup": "always",
-    "restoreTerminals.terminals": [
-        {
-        "splitTerminals": [
-            {
-            "name": "RPCiege",
-            //"commands": ["ls"]
-            }
-        ]
-        }
-    ]
+    "workbench.panel.opensMaximized": "always"
 }
