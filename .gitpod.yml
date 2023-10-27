@@ -2,8 +2,6 @@ image:
   file: Dockerfile
 tasks:
   - name: RPCiege
-    before: |
-      echo "source <(soroban completion --shell bash)" >> ~/.bashrc
     command: |
       soroban config identity generate player --global
       soroban config identity fund player --global --network futurenet
