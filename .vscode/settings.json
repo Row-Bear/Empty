@@ -4,4 +4,13 @@
     "workbench.panel.opensMaximized": "always",
     "terminal.integrated.defaultLocation": "editor",
     "terminal.integrated.hideOnStartup": "always",
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "RPCiege",
+                }
+            ]
+        }
+    ]
 }

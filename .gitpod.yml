@@ -1,7 +1,7 @@
 image:
   file: .Dockerfile
 tasks:
-  - name: Terminal
+  - name: RPCiege
     init: clear # In place to allow for pre-building
     command: |
       soroban config identity generate default --global
