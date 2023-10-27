@@ -1,0 +1,12 @@
+image:
+  file: .Dockerfile
+tasks:
+  - name: Terminal
+    init: clear # In place to allow for pre-building
+    command: |
+      soroban config identity generate default --global
+      soroban config identity fund default --global --network futurenet
+      soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022" 
+      soroban version
+      clear
+      exit
