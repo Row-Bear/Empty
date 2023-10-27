@@ -3,19 +3,17 @@
 {
 	"name": "Rust",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-
-		"build": {
-			// Path is relative to the devcontainer.json file.
-			"dockerfile": ".Dockerfile"
-		},
-		"customizations": {
-			"vscode": {
-				"extensions": [
-					"EthanSK.restore-terminals"
-				]
-			}
-		},
-
+	"build": {
+		// Path is relative to the devcontainer.json file.
+		"dockerfile": ".Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EthanSK.restore-terminals"
+			]
+		}
+	},
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
 	// 	{
@@ -24,23 +22,19 @@
 	// 		"type": "volume"
 	// 	}
 	// ]
-
 	// Features to add to the dev container. More info: https://containers.dev/features.
-
-		// "features": {"ghcr.io/devcontainers/features/rust:1": {
+	// "features": {"ghcr.io/devcontainers/features/rust:1": {
 	// 		"version": "latest",
 	// 		"profile": "minimal"},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-		// as per https://github.com/orgs/community/discussions/43534:
-		// Option to disable welcome message, or replace it with welcome.txt
-		//"postCreateCommand": "mkdir -p $HOME/.config/vscode-dev-containers/ && touch $HOME/.config/vscode-dev-containers/first-run-notice-already-displayed"
-		"postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
+	// as per https://github.com/orgs/community/discussions/43534:
+	// Option to disable welcome message, or replace it with welcome.txt
+	//"postCreateCommand": "mkdir -p $HOME/.config/vscode-dev-containers/ && touch $HOME/.config/vscode-dev-containers/first-run-notice-already-displayed"
+	"postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
