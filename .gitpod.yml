@@ -2,7 +2,7 @@ image:
   file: Dockerfile
 tasks:
   - name: RPCiege
-    init: |
+    before: |
       echo "source <(soroban completion --shell bash)" >> ~/.bashrc
     command: |
       soroban config identity generate player --global
@@ -10,3 +10,6 @@ tasks:
       soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022"
       clear
       exit
+vscode:
+  extensions:
+    - EthanSK.restore-terminals
