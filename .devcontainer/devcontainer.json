@@ -5,14 +5,7 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		// Path is relative to the devcontainer.json file.
-		"dockerfile": ".Dockerfile"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"EthanSK.restore-terminals"
-			]
-		}
+		"dockerfile": "../Dockerfile"
 	},
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
@@ -32,9 +25,14 @@
 	// as per https://github.com/orgs/community/discussions/43534:
 	// Option to disable welcome message, or replace it with welcome.txt
 	//"postCreateCommand": "mkdir -p $HOME/.config/vscode-dev-containers/ && touch $HOME/.config/vscode-dev-containers/first-run-notice-already-displayed"
-	"postCreateCommand": "sudo cp .devcontainer/welcome.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EthanSK.restore-terminals"
+			]
+		}
+	}
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
