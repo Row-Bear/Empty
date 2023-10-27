@@ -1,9 +1,13 @@
 image:
-  file: .Dockerfile
+  file: Dockerfile
 tasks:
-  - name: Terminal
-    init: clear # In place to allow for pre-building
+  - name: RPCiege
     command: |
-      exit
-      soroban version
+      soroban config identity generate player --global
+      soroban config identity fund player --global --network futurenet
+      soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022"
       clear
+      exit
+vscode:
+  extensions:
+    - EthanSK.restore-terminals
