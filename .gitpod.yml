@@ -7,6 +7,6 @@ tasks:
       soroban config identity generate player --global
       soroban config identity fund player --global --network futurenet
       soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022" 
-      soroban version
+      echo "source <(soroban completion --shell bash)" >> ~/.bashrc
       clear
       exit
