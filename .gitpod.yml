@@ -2,11 +2,11 @@ image:
   file: Dockerfile
 tasks:
   - name: RPCiege
-    init: clear # In place to allow for pre-building
+    init: |
+      echo "source <(soroban completion --shell bash)" >> ~/.bashrc
     command: |
       soroban config identity generate player --global
       soroban config identity fund player --global --network futurenet
-      soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022" 
-      echo "source <(soroban completion --shell bash)" >> ~/.bashrc
+      soroban config network add rpciege --global --rpc-url "https://futurenet.rpciege.com" --network-passphrase "Test SDF Future Network ; October 2022"
       clear
       exit
